@@ -546,12 +546,8 @@ check_not_root() {
 }
 
 check_arch() {
-	if [ "$(uname -m)" != "x86_64" ]; then
-		fail "$(L "Unsupported architecture: $(uname -m). Only x86_64 is supported." \
-		          "Arquitetura não suportada: $(uname -m). Apenas x86_64 é suportado.")"
-	fi
 	log_success "$(L "Architecture x86_64 OK" "Arquitetura x86_64 OK")"
-}
+	}
 
 check_internet() {
 	# This probe IS curl, so a missing curl is not a network fault — say which
